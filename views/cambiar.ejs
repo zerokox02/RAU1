@@ -1,0 +1,28 @@
+<%- include ('layouts/header.ejs') -%>
+<% if (VARIABLE) { %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Editar Información</h5>
+          <form action="/edit" method="post">
+            <input id="ID" name="ID" value="<%= VARIABLE.ID %>" hidden>
+            <div class="mb-3">
+              <label for="Foto" class="form-label">Foto</label>
+              <input type="text" id="Foto" name="Foto" class="form-control" placeholder="Foto" value="<%= VARIABLE.Foto %>" aria-label="Foto" aria-describedby="addon-wrapping">
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Descripción" value="<%= VARIABLE.descripcion %>" aria-label="descripcion" aria-describedby="addon-wrapping">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+
+<%- include ('layouts/footer.ejs') -%>

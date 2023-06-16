@@ -1,0 +1,25 @@
+<%- include ('layouts/header.ejs') -%>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Agregar Información</h5>
+          <form action="/save" method="post">
+            <div class="mb-3">
+              <label for="Foto" class="form-label">Foto</label>
+              <input type="text" id="Foto" name="Foto" class="form-control" placeholder="Foto" aria-label="Foto" aria-describedby="addon-wrapping">
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Descripción" aria-label="descripcion" aria-describedby="addon-wrapping">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include ('layouts/footer.ejs') -%>

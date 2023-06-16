@@ -1,0 +1,14 @@
+<%- include ('layouts/header.ejs') -%>
+<div class="text-center">
+  <form action="/auth" method="post">
+    <h3>EMAIL</h3>
+    <p></p>
+    <input type="email" name="email" id="email">
+    <h3>CONTRASEÑA</h3>
+    <p></p>
+    <input type="password" name="contraseña" id="contraseña">
+    <p></p>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+<%- include ('layouts/footer.ejs') -%>
